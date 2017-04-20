@@ -1,6 +1,0 @@
-D:\Code\C#\LEVEL1\DZ\HW_VTariko_1\Console_App_1\bin\Debug\Console_App_1.exe.config
-D:\Code\C#\LEVEL1\DZ\HW_VTariko_1\Console_App_1\bin\Debug\Console_App_1.exe
-D:\Code\C#\LEVEL1\DZ\HW_VTariko_1\Console_App_1\bin\Debug\Console_App_1.pdb
-D:\Code\C#\LEVEL1\DZ\HW_VTariko_1\Console_App_1\obj\Debug\Console_App_1.csprojResolveAssemblyReference.cache
-D:\Code\C#\LEVEL1\DZ\HW_VTariko_1\Console_App_1\obj\Debug\Console_App_1.exe
-D:\Code\C#\LEVEL1\DZ\HW_VTariko_1\Console_App_1\obj\Debug\Console_App_1.pdb
