@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Console_App_1
 {
@@ -33,6 +34,8 @@ namespace Console_App_1
 		/// </summary>
 		class Person
 		{
+			#region Свойства
+
 			/// <summary>
 			/// Имя
 			/// </summary>
@@ -63,7 +66,10 @@ namespace Console_App_1
 			/// </summary>
 			public string City { get; set; }
 
-			
+			#endregion
+
+			#region Конструктор
+
 			/// <summary>
 			/// Констурктор персоны
 			/// </summary>
@@ -81,6 +87,10 @@ namespace Console_App_1
 				Weight = weight;
 			}
 
+			#endregion
+
+			#region Методы
+
 			/// <summary>
 			/// Вывод информации методом "склейки"
 			/// </summary>
@@ -90,7 +100,7 @@ namespace Console_App_1
 				Console.WriteLine("Вывод информации методом \"склейки\"");
 				Console.WriteLine();
 				Console.WriteLine("Имя:\t\t" + FirstName + "\nФамилия:\t" + LastName + "\nВозраст:\t" + Age + "\nРост:\t\t" + Height +
-				                  "\nВес:\t\t" + Weight);
+								  "\nВес:\t\t" + Weight);
 				Console.WriteLine(new string('-', 40));
 			}
 
@@ -105,7 +115,9 @@ namespace Console_App_1
 				Console.WriteLine(
 					$"{"Имя",15}: {FirstName,20}\n{"Фамилия",15}: {LastName,20}\n{"Возраст",15}: {Age,20}\n{"Рост",15}: {Height,20}\n{"Вес",15}: {Weight,20}");
 				Console.WriteLine(new string('-', 40));
-			}
+			} 
+
+			#endregion
 		}
 
 		/// <summary>
@@ -113,6 +125,8 @@ namespace Console_App_1
 		/// </summary>
 		class Point
 		{
+			#region Свойства
+
 			/// <summary>
 			/// Координата точки по Иксу
 			/// </summary>
@@ -122,6 +136,10 @@ namespace Console_App_1
 			/// Координата точки по Игреку
 			/// </summary>
 			public int Y { get; set; }
+
+			#endregion
+
+			#region Конструктор
 
 			/// <summary>
 			/// Констуктор точки
@@ -134,6 +152,10 @@ namespace Console_App_1
 				Y = y;
 			}
 
+			#endregion
+
+			#region Методы
+
 			/// <summary>
 			/// Метод поиска расстояния между текущей точкой и выбранной
 			/// </summary>
@@ -145,6 +167,38 @@ namespace Console_App_1
 				Console.WriteLine($"Расстояние от точки ({X};{Y}) до точки ({aPoint.X};{aPoint.Y}) равняется {distance:F2}");
 				return distance;
 			}
+
+			#endregion
+		}
+
+		/// <summary>
+		/// Класс вспомогательных методов
+		/// </summary>
+		static class Helper
+		{
+			#region Методы
+
+			/// <summary>
+			/// Метод ожидания
+			/// </summary>
+			public static void Pause()
+			{
+				Console.ReadKey();
+			}
+
+			/// <summary>
+			/// Метод вывода на печать по указанным координатам в консоли
+			/// </summary>
+			/// <param name="info">Строка для вывода</param>
+			/// <param name="x">Положение для печати по иксу</param>
+			/// <param name="y"></param>
+			public static void PrintInfo(string info, int x, int y)
+			{
+				Console.SetCursorPosition(x, y);
+				Console.WriteLine(info);
+			}
+
+			#endregion
 		}
 
 
@@ -208,7 +262,8 @@ namespace Console_App_1
 
 			#endregion
 
-			Console.ReadKey();  //Ожидаем ввод перед очисткой экрана
+			Console.WriteLine("Нажмите <Enter> для продолжения...");
+			Helper.Pause();  //Ожидаем ввод перед очисткой экрана
 			Console.Clear();    //Очистка консоли
 
 			#region Вывод посередине
@@ -221,11 +276,11 @@ namespace Console_App_1
 			int h = Console.WindowHeight;
 			int x = (w - info.Length)/2;
 			int y = (h - 1)/2;
-			PrintInfo(info, x, y);
+			Helper.PrintInfo(info, x, y);
 
 			#endregion
 
-			Console.ReadKey();
+			Helper.Pause();
 		}
 
 		#region Методы
@@ -241,27 +296,27 @@ namespace Console_App_1
 			byte age;
 			float weight, height;
 
-			Console.Write("Введите свое имя:");
+			Console.Write("Введите свое имя: ");
 			string firstName = Console.ReadLine();
-			Console.Write("Введите свою фамилию:");
+			Console.Write("Введите свою фамилию: ");
 			string lastName = Console.ReadLine();
 
 			//Проверка возраста на валидность 
 			do
 			{
-				Console.Write("Введите свой возраст:");
+				Console.Write("Введите свой возраст: ");
 			} while (!byte.TryParse(Console.ReadLine(), out age) && age <=0);
 
 			//Проверка роста на валидность
 			do
 			{
-				Console.Write("Введите свой рост, м:");
+				Console.Write("Введите свой рост, м: ");
 			} while (!float.TryParse(Console.ReadLine(), out height) && height <= 0);
 
 			//Проверка массы на валидность
 			do
 			{
-				Console.Write("Введите свой вес, кг:");
+				Console.Write("Введите свой вес, кг: ");
 			} while (!float.TryParse(Console.ReadLine(), out weight) && weight <= 0);
 
 			//Вызов конструктора класса пользователя
@@ -358,23 +413,6 @@ namespace Console_App_1
 
 		#endregion
 
-		#region Метод вывода на печать в центре
-
-		/// <summary>
-		/// Метод вывода на печать в центре консоли
-		/// </summary>
-		/// <param name="info">Строка для вывода</param>
-		/// <param name="x">Положение для печати по иксу</param>
-		/// <param name="y"></param>
-		static void PrintInfo(string info, int x, int y)
-		{
-			Console.SetCursorPosition(x, y);
-			Console.WriteLine(info);
-		}
-
 		#endregion
-
-		#endregion
-
 	}
 }
