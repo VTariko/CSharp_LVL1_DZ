@@ -2,16 +2,14 @@
 
 namespace Helper
 {
-	//Домашняя работа C#-1, Урок 1
+	//Домашняя работа C#-1
 	//Выполнил: Вячеслав Тарико (VTariko)
-	//
-	//Внимание! Решал задачи 5, 6 и 7.
 
 
 	/// <summary>
 	/// Класс вспомогательных методов
 	/// </summary>
-	public class LogicHelper
+	public static class LogicHelper
     {
 		/// <summary>
 		/// Метод вывод на экран линию-разделитель, состоящую из 40 знаков '-'
@@ -29,5 +27,33 @@ namespace Helper
 		    Console.WriteLine("Нажмите Enter для продолжения...");
 		    Console.ReadKey();
 	    }
-    }
+
+		/// <summary>
+		/// Наименьшее общее кратное
+		/// </summary>
+		/// <param name="a"></param>
+		/// <param name="b"></param>
+		/// <returns></returns>
+		public static int Nok(int a, int b)
+		{
+			return Math.Abs(a * b) / Nod(a, b);
+		}
+
+		/// <summary>
+		/// Наибольший общий делитель
+		/// </summary>
+		/// <param name="a"></param>
+		/// <param name="b"></param>
+		/// <returns></returns>
+		public static int Nod(int a, int b)
+		{
+			while (b != 0)
+			{
+				int t = a % b;
+				a = b;
+				b = t;
+			}
+			return a;
+		}
+	}
 }

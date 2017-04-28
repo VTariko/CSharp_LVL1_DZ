@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+using Helper;
 
 namespace FractionsWork
 {
@@ -79,7 +75,7 @@ namespace FractionsWork
 		/// <returns></returns>
 		public static Fraction operator +(Fraction f1, Fraction f2)
 		{
-			int nok = Nok(f1.Denominator, f2.Denominator);
+			int nok = LogicHelper.Nok(f1.Denominator, f2.Denominator);
 			int numenator1 = f1.Numerator * nok / f1.Denominator;
 			int numenator2 = f2.Numerator * nok / f2.Denominator;
 
@@ -98,7 +94,7 @@ namespace FractionsWork
 		/// <returns></returns>
 		public static Fraction operator -(Fraction f1, Fraction f2)
 		{
-			int nok = Nok(f1.Denominator, f2.Denominator);
+			int nok = LogicHelper.Nok(f1.Denominator, f2.Denominator);
 			int numenator1 = f1.Numerator * nok / f1.Denominator;
 			int numenator2 = f2.Numerator * nok / f2.Denominator;
 
@@ -122,7 +118,7 @@ namespace FractionsWork
 				Numerator = f1.Numerator * f2.Numerator,
 				Denominator = f1.Denominator * f2.Denominator
 			};
-			int nod = Nod(fraction.Numerator, fraction.Denominator);
+			int nod = LogicHelper.Nod(fraction.Numerator, fraction.Denominator);
 			fraction.Numerator /= nod;
 			fraction.Denominator /= nod;
 
@@ -142,40 +138,14 @@ namespace FractionsWork
 				Numerator = f1.Numerator * f2.Denominator,
 				Denominator = f1.Denominator * f2.Numerator
 			};
-			int nod = Nod(fraction.Numerator, fraction.Denominator);
+			int nod = LogicHelper.Nod(fraction.Numerator, fraction.Denominator);
 			fraction.Numerator /= nod;
 			fraction.Denominator /= nod;
 
 			return fraction;
 		}
 
-		/// <summary>
-		/// Наименьшее общее кратное
-		/// </summary>
-		/// <param name="a"></param>
-		/// <param name="b"></param>
-		/// <returns></returns>
-		private static int Nok(int a, int b)
-		{
-			return Abs(a * b) / Nod(a, b);
-		}
 
-		/// <summary>
-		/// Наибольший общий делитель
-		/// </summary>
-		/// <param name="a"></param>
-		/// <param name="b"></param>
-		/// <returns></returns>
-		private static int Nod(int a, int b)
-		{
-			while (b != 0)
-			{
-				int t = a % b;
-				a = b;
-				b = t;
-			}
-			return a;
-		}
 
 		/// <summary>
 		/// Поиск знака дроби
