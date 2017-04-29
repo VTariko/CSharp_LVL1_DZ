@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicHelper", "Helper\Logic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractionsWork", "FractionsWork\FractionsWork.csproj", "{6C7FF51B-AD0F-4890-A5A0-AB14156C8B27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyboardEnter", "KeyboardEnter\KeyboardEnter.csproj", "{B5202C26-D191-4589-A42E-97B2EEAC9326}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6C7FF51B-AD0F-4890-A5A0-AB14156C8B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C7FF51B-AD0F-4890-A5A0-AB14156C8B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C7FF51B-AD0F-4890-A5A0-AB14156C8B27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5202C26-D191-4589-A42E-97B2EEAC9326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5202C26-D191-4589-A42E-97B2EEAC9326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5202C26-D191-4589-A42E-97B2EEAC9326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5202C26-D191-4589-A42E-97B2EEAC9326}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
