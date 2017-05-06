@@ -150,7 +150,7 @@ namespace UnivariateArray
 		/// Создание массива из файла по образцу "12, 40, 21, 5, ...."
 		/// </summary>
 		/// <param name="path">Путь к файлу</param>
-		public UnivariateArray(string path)
+		private UnivariateArray(string path)
 		{
 			using (StreamReader sr = new StreamReader(path))
 			{
@@ -205,7 +205,7 @@ namespace UnivariateArray
 		/// </summary>
 		/// <param name="path">Путь к файлу</param>
 		/// <returns>Объект класса UnivariateArray</returns>
-		public static UnivariateArray CreateFromFile(string path)
+		public static UnivariateArray LoadFromFile(string path)
 		{
 			return File.Exists(path) ? new UnivariateArray(path) : new UnivariateArray();
 		}

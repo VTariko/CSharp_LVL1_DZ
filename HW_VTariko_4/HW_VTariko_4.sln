@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.UnivariateArray", "2.Univ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.DoubleArray", "4.DoubleArray\4.DoubleArray.csproj", "{77FF34DD-CB7D-4925-8067-3FE4BCA242F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.DoNotBelive", "6.DoNotBelive\6.DoNotBelive.csproj", "{4907E2BD-9C50-410C-8A20-006809D12864}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.DoublerGame", "5.DoublerGame\5.DoublerGame.csproj", "{D14209BC-E7A1-4FC6-826E-BDFE3F017656}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{77FF34DD-CB7D-4925-8067-3FE4BCA242F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77FF34DD-CB7D-4925-8067-3FE4BCA242F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77FF34DD-CB7D-4925-8067-3FE4BCA242F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4907E2BD-9C50-410C-8A20-006809D12864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4907E2BD-9C50-410C-8A20-006809D12864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4907E2BD-9C50-410C-8A20-006809D12864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4907E2BD-9C50-410C-8A20-006809D12864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D14209BC-E7A1-4FC6-826E-BDFE3F017656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14209BC-E7A1-4FC6-826E-BDFE3F017656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14209BC-E7A1-4FC6-826E-BDFE3F017656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14209BC-E7A1-4FC6-826E-BDFE3F017656}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
