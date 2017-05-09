@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.StringCheck", "2.StringCh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.SchoolTask", "4.SchoolTask\4.SchoolTask.csproj", "{446715EB-9E2F-41C5-9B45-F5FEA0BCC0D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.Transposition", "3.Transposition\3.Transposition.csproj", "{33122192-FBB1-49AE-BAF0-BD3C1B00CF22}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{446715EB-9E2F-41C5-9B45-F5FEA0BCC0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{446715EB-9E2F-41C5-9B45-F5FEA0BCC0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{446715EB-9E2F-41C5-9B45-F5FEA0BCC0D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33122192-FBB1-49AE-BAF0-BD3C1B00CF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33122192-FBB1-49AE-BAF0-BD3C1B00CF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33122192-FBB1-49AE-BAF0-BD3C1B00CF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33122192-FBB1-49AE-BAF0-BD3C1B00CF22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
