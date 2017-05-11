@@ -29,7 +29,7 @@ namespace StudentsWork
 		/// Словарь для хранения информации, сколько на каком курсе учится студентов в возрасте 18-20 лет.
 		/// Ключ - курс, значение - количество молодых студентов.
 		/// </summary>
-		public Dictionary<byte, int> YoungCourses { get; private set; }
+		public Dictionary<byte, int> YoungCourses { get; }
 
 		/// <summary>
 		/// Количество учащихся первого курса
