@@ -58,20 +58,22 @@ namespace DifficultTask
 					}
 				}
 			}
-			//int max = 0;
+			//long max = 0;
 			//for (int i = 0; i < array.Length; i++)
 			//{
 			//	for (int j = 0; j < array.Length; j++)
 			//	{
-			//		if (i != j && array[i] * array[j] > max)
+			//		if (i != j && (long)array[i] * array[j] > max)
 			//		{
-			//			max = array[i] * array[j];
+			//			max = (long)array[i] * array[j];
 			//		}
 			//	}
 			//}
 			//Console.WriteLine(max);
 			//Console.WriteLine((DateTime.Now - dt).TotalSeconds);
 
+
+			//Идея простая: вместо того, чтобы каждый раз умножать и сравнивать с перемножением, просто найдем два самых больших элемента и перемножим их один раз.
 			int max1 = array[0];
 			int max2 = array[1];
 
@@ -93,7 +95,8 @@ namespace DifficultTask
 					max2 = array[i];
 				}
 			}
-			Console.WriteLine(max1 * max2);
+			long maxQ = (long) max1*max2;
+			Console.WriteLine(maxQ);
 
 			Console.WriteLine((DateTime.Now-dt).TotalSeconds);
 		}

@@ -35,7 +35,7 @@ namespace FindNumber
 			{
 				string text = File.ReadAllText(pathFile);
 				//Составляем шаблон под условия xx-xx-xx, xxx-xxx или xxx-xx-xx
-				string pattern = @"(\b\d\d-\d\d-\d\d\b)|(\b\d\d\d-\d\d\d\b)|(\b\d\d\d-\d\d-\d\d\b)";
+				string pattern = @"(\b\d{2}-\d{2}-\d{2}\b)|(\b\d{3}-\d{3}\b)|(\b\d{3}-\d{2}-\d{2}\b)";
 				Regex regex = new Regex(pattern);
 				foreach (Match match in regex.Matches(text))
 				{

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.FindNumber", "4.FindNumbe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.DifficultTask", "5.DifficultTask\5.DifficultTask.csproj", "{F12FF967-86EB-43DC-9D0A-4F85C80FAF9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.FindHtmlImg", "6.FindHtmlSrc\6.FindHtmlImg.csproj", "{63F96180-F678-4218-BFEB-D7B59A3FEA97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F12FF967-86EB-43DC-9D0A-4F85C80FAF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F12FF967-86EB-43DC-9D0A-4F85C80FAF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F12FF967-86EB-43DC-9D0A-4F85C80FAF9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F96180-F678-4218-BFEB-D7B59A3FEA97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F96180-F678-4218-BFEB-D7B59A3FEA97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F96180-F678-4218-BFEB-D7B59A3FEA97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F96180-F678-4218-BFEB-D7B59A3FEA97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
