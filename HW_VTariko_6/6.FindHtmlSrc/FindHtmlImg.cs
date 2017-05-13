@@ -14,7 +14,7 @@ namespace FindHtmlImg
 	{
 		static void Main(string[] args)
 		{
-			string path = @"C:\VTariko\Education\Repository\shop_VTariko";
+			string path = @"D:\Code\HTML_CSS\myShop.git\shop_VTariko";
 			FindImgInDir(path);
 			LogicHelper.Line();
 			LogicHelper.Pause();
