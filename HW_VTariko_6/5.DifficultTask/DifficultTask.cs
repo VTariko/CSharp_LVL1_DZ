@@ -73,14 +73,29 @@ namespace DifficultTask
 			//Console.WriteLine((DateTime.Now - dt).TotalSeconds);
 
 
-			//Идея простая: вместо того, чтобы каждый раз умножать и сравнивать с перемножением,
-			//просто отсортируем массив и возьмем первый элемент (самый большой) и умножим его на восьмой элемент.
-			Array.Sort(array, (int1, int2) => int2.CompareTo(int1));
-
+			//Идея простая: вместо того, чтобы каждый раз умножать и сравнивать с перемножением, просто найдем два самых больших элемента и перемножим их один раз.
 			int max1 = array[0];
-			int max2 = array[7];
+			int max2 = array[1];
 
-			long maxQ = (long)max1*max2;
+			for (int i = 2; i < array.Length; i++)
+			{
+				if (array[i] >= max1 && array[i] >= max2)
+				{
+					if (max1 >= max2)
+						max2 = array[i];
+					else
+						max1 = array[i];
+				}
+				else if (array[i] > max1)
+				{
+					max1 = array[i];
+				}
+				else if (array[i] > max2)
+				{
+					max2 = array[i];
+				}
+			}
+			long maxQ = (long) max1*max2;
 			Console.WriteLine(maxQ);
 
 			Console.WriteLine((DateTime.Now-dt).TotalSeconds);
