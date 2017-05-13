@@ -58,12 +58,12 @@ namespace DifficultTask
 					}
 				}
 			}
-			//long max = 0;
+			long maxMulti = 0;
 			//for (int i = 0; i < array.Length; i++)
 			//{
 			//	for (int j = 0; j < array.Length; j++)
 			//	{
-			//		if (i != j && (long)array[i] * array[j] > max)
+			//		if (Math.Abs(i - j) < 8 && (long)array[i] * array[j] > max)
 			//		{
 			//			max = (long)array[i] * array[j];
 			//		}
@@ -71,34 +71,26 @@ namespace DifficultTask
 			//}
 			//Console.WriteLine(max);
 			//Console.WriteLine((DateTime.Now - dt).TotalSeconds);
+			//LogicHelper.Line();
+			//------------------------------------------//
+			//Идея простая: вместо того, чтобы дважды проходить цикл,
+			//достаточно находить максимальное число из подмассива позади (с "отставанием" на 8)
+			//умножать этот максимум на текущее число и сравнивать с предыдущим максимально найденным произведением.
+			//Также, чтобы еще оптимизировать, будем запоминать произведение во временную переменную. чтоыб н еумножать дважды одно и тоже.
 
-
-			//Идея простая: вместо того, чтобы каждый раз умножать и сравнивать с перемножением, просто найдем два самых больших элемента и перемножим их один раз.
-			int max1 = array[0];
-			int max2 = array[1];
-
-			for (int i = 2; i < array.Length; i++)
+			LogicHelper.Line();
+			dt = DateTime.Now;
+			int max = array[0];
+			for (int i = 8; i < array.Length; i++)
 			{
-				if (array[i] >= max1 && array[i] >= max2)
-				{
-					if (max1 >= max2)
-						max2 = array[i];
-					else
-						max1 = array[i];
-				}
-				else if (array[i] > max1)
-				{
-					max1 = array[i];
-				}
-				else if (array[i] > max2)
-				{
-					max2 = array[i];
-				}
+				if (array[i - 8] > max)
+					max = array[i - 8];
+				long temp = (long) max*array[i];
+				if (temp > maxMulti)
+					maxMulti = temp;
 			}
-			long maxQ = (long) max1*max2;
-			Console.WriteLine(maxQ);
-
-			Console.WriteLine((DateTime.Now-dt).TotalSeconds);
+			Console.WriteLine(maxMulti);
+			Console.WriteLine((DateTime.Now - dt).TotalSeconds);
 		}
 
 	}
