@@ -1,0 +1,41 @@
+﻿<Window x:Class="DoublerGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Удвоитель" Height="180" Width="250" WindowStartupLocation="CenterScreen">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="20"/>
+			<RowDefinition Height="104*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="3*" />
+			<ColumnDefinition Width="2*" />
+		</Grid.ColumnDefinitions>
+		<Menu Grid.ColumnSpan="2">
+			<MenuItem Header="Игра">
+				<MenuItem Header="Новая игра" Click="MenuItem_Click_1" ></MenuItem>
+				<Separator></Separator>
+				<MenuItem Header="Выход" Click="MenuItem_Click"></MenuItem>
+			</MenuItem>
+		</Menu>
+		<StackPanel HorizontalAlignment="Stretch"
+		            VerticalAlignment="Center" Margin="0,8,0,7" Grid.RowSpan="2" Grid.Row="1">
+			<TextBlock Text="Текущее значение:" HorizontalAlignment="Center"></TextBlock>
+			<TextBlock x:Name="txtCurrent" Text="{Binding Path=Current, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center"></TextBlock>
+			<TextBlock Text="Надо получить:" HorizontalAlignment="Center"></TextBlock>
+			<TextBlock x:Name="txtFinish" Text="{Binding Path=Finish, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center"></TextBlock>
+			<ProgressBar x:Name="barCurrent" Value="{Binding Path=Percent, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Height="20" Margin="10"/>
+		</StackPanel>
+		<StackPanel HorizontalAlignment="Stretch"
+		            VerticalAlignment="Center"
+		            Grid.Column="1" Margin="0,0,0,-1" Grid.RowSpan="2" Grid.Row="1">
+			<Button x:Name="btnAddOne" Content="+1" Margin="5 5 5 5" Click="btnAddOne_Click"></Button>
+			<Button x:Name="btnMultiTwo" Content="*2" Margin="5 5 5 5" Click="btnMultiTwo_Click"></Button>
+			<Button x:Name="btnToOne" Content="Сброс" Margin="5 5 5 5" Click="btnToOne_Click"></Button>
+			<Button x:Name="btnCancel" Content="Отмена хода" Margin="5 5 5 5" Click="btnCancel_Click" ></Button>
+		</StackPanel>
+	</Grid>
+</Window>
