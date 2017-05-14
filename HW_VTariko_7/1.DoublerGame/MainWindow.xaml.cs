@@ -55,8 +55,8 @@ namespace DoublerGame
 			if (result.HasValue)
 			{
 				MessageBox.Show(string.Format("Вы {0}!\nКоличество попыток: {1}", result.Value ? "выиграли" : "проиграли", doubler.Attempt));
-				System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
-				Application.Current.Shutdown();
+				doubler = new Doubler(MAX_DOUBLER);
+				DataContext = doubler;
 			}
 		}
 
@@ -67,8 +67,8 @@ namespace DoublerGame
 
 		private void MenuItem_Click_1(object sender, RoutedEventArgs e)
 		{
-			System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
-			Application.Current.Shutdown();
+			doubler = new Doubler(MAX_DOUBLER);
+			DataContext = doubler;
 		}
 	}
 }
